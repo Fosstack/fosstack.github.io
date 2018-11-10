@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107455490-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-107455490-1');
+    </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2434930922382269",
+    enable_page_level_ads: true
+  });
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c5c5c5">
+    <meta name="msapplication-navbutton-color" content="#FAFAFA">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FAFAFA">
+
+    
+    <meta name="title" content="Must-Have Packages and Settings in Sublime Text for a Python Developer" >
+    <meta name="description" content="In this post, I will show you awesome Sublime packages/plugins and some settings for your workflow which will make your life as a Python programmer much more easier." >
+    <meta name="keywords" content="python" >
+    <meta name="author" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 days">
+    <!-- python,linux,FOSS -->
+    <!-- For Facebook -->
+    <meta property="og:title" content="Fosstack Blog" />
+    <meta property="og:type" content="article" />
+<!--       <meta property="og:image" content="" /> -->
+    <meta property="og:url" content="/setup-sublime-python/" />
+    <meta property="og:description" content="In this post, I will show you awesome Sublime packages/plugins and some settings for your workflow which will make your life as a Python programmer much more easier." />
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Must-Have Packages and Settings in Sublime Text for a Python Developer" />
+    <meta name="twitter:description" content="In this post, I will show you awesome Sublime packages/plugins and some settings for your workflow which will make your life as a Python programmer much more easier." />
+<!--       <meta name="twitter:image" content="" />-->
+ 
+
+    <title>
+    
+  Must-Have Packages and Settings in Sublime Text for a Python Developer | 
+      Fosstack
+    
+
+    </title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico" />
+    <!-- Bootstrap core CSS -->
+    <link href="../static/core_blog/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/core_blog/css/clean-blog.min.css" rel="stylesheet">
+    <link href="../static/app.min.css" rel="stylesheet">
+    <link href="../static/core_blog/css/github.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/core_blog/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+  <style>
+    #bg{
+      background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,#30B58B,#22D0BA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    #ov{
+      background-color: transparent !important;
+    }
+  </style>
+
+
+
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">Fosstack</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../category/python/index.html">Python</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../category/linux/index.html">Linux</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../tips/index.html">Tips</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about/index.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact/index.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#"  data-toggle="modal" data-target="#mkdocs_search_modal">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form role="form" method="get" action="../index.html" accept-charset="utf-8">
+                    <div class="form-group">
+                        <input autofocus type="text" name="q" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+  <!-- Page Header -->
+    <header class="masthead" id="bg">
+      <div class="overlay" id="ov"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Must-Have Packages and Settings in Sublime Text for a Python Developer</h1>
+              <h6 class="post-subtitle">
+              <h2 class="subheading">In this post, I will show you awesome Sublime packages/plugins and some settings for your workflow which will make your life as a Python programmer much more easier.</h2>
+                
+              <span class="meta">Posted by
+                <a href="index.html#">Mohit</a>
+                on January 27, 2018&nbsp;&nbsp;
+                <span id="hits" style="display:inline-block"> <i class="fa fa-eye" aria-hidden="true"></i> 20015 views</span>
+                
+              </h6>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    
+
+
+    
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="post_detail col-lg-8 col-md-10 mx-auto">
+            <span id="the_content"><p>If you are one of those Awesome Python programmers who love Sublime Text then you have come to the right place. In this post, I will show you the settings and plugins I use as a Python programmer for Sublime. So let's make your Sublime more awesome.</p>
+<p><span style="font-size: 18pt;"><strong>User Settings:</strong></span></p>
+<p>Open Sublime Text.</p>
+<p>Open the Sublime Text personal settings file:</p>
+<p>&nbsp; &nbsp; Preferences &gt; Settings</p>
+<p>A file named&nbsp; <code>Preferences.sublime-settings--User</code>&nbsp;should open on the right-hand side. Add these lines to your User specific settings</p>
+<pre class="language-python"><code>{
+        // Your existings settings
+
+	"ensure_newline_at_eof_on_save": true,
+	"rulers":
+	[
+		72, 79
+	],
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}
+</code></pre>
+<p>These settings are self-explanatory but you aren't getting the "rulers" part, so according to pep8,&nbsp;docstrings&nbsp;and comments should be limited to 72 characters and all other lines should be limited to 79 characters. So these lines will help you when you are crossing your limits, further read&nbsp;<span style="color: #00ccff;"><a style="color: #00ccff;" href="http://pep8.org/" target="_blank" rel="noopener">PEP-8</a>.</span></p>
+<p><span style="font-size: 14pt;"><strong>Packages/Plugins</strong></span></p>
+<p><span style="font-size: 14pt;">We will be setting up the following packages one by one:</span></p>
+<ul>
+<li><span style="font-size: 14pt;">Sublime Linter</span></li>
+<li><span style="font-size: 14pt;">SublimeLinter-flake8</span></li>
+<li><span style="font-size: 14pt;">Djaneiro</span></li>
+<li><span style="font-size: 14pt;">PyYapf Python Formatter</span></li>
+<li><span style="font-size: 14pt;">Anaconda</span></li>
+</ul>
+<p><strong><span style="font-size: 14pt;"><span style="font-size: 18pt;">1. First Install SublimeLinter and Flake8 plugin</span></span></strong></p>
+<p><span style="font-size: 14pt;">These packages are used to lint your code. Wondering what is code linting ?</span></p>
+<p>A code linter is a program that analyses your source code for potential errors. The kinds of errors a linter can detect include:</p>
+<ul>
+<li>syntax errors;</li>
+<li>structural problems like the use of undefined variables.</li>
+<li>best practice or code style guideline violations.</li>
+</ul>
+<p><strong>Install Flake8</strong></p>
+<pre class="language-python"><code>pip3 install flake8</code></pre>
+<p>Then just to make sure flake8 is correctly installed -- run flake8 badly_formatted_python_program.py and it will show you all the error in your program</p>
+<p><strong>Install SublimeLinter</strong></p>
+<p>Open package control by pressing 'ctrl' + 'shift' +'p' and type 'install package' then click on the first result that appears. Then search for <code>SublimeLinter</code>&nbsp;</p>
+<p>and press 'Enter' to install. After installing 'SublimeLinter, type this <code>SublimeLinter-flake8</code> and install it. Restart your Sublime and after the previous steps completed, we can see the linting errors and warnings right in Sublime Text and update live as we code.&nbsp;</p>
+<p><img src="../media/uploads/screenshot_from_2018-01-27_00.00.00.png" alt="sublime" width="1063" height="154" /></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 18pt;"><strong>2. Install Djaneiro</strong></span></p>
+<p>Djaneiro supports Django templating and keyword highlighting and provides useful code snippets (tab completions) for Sublime Text. The snippet system is an incredible timesaver. You can create common Django blocks with only a few keystrokes for templates, models, forms, and views. Check out the official documentation to see a list of snippets.&nbsp;<span style="color: #00ccff;"><a style="color: #00ccff;" href="https://github.com/squ1b3r/Djaneiro" target="_blank" rel="noopener">Docs-Djaneiro</a></span></p>
+<p>Go to package control &gt; install package and then search for package name <code>Djaneiro</code></p>
+<p><strong style="font-size: 24px;">3. PyYapf Python formatter</strong></p>
+<p>I bet you are going to love this package as much as I do. First, let me introduce you to what is PyYapf, it is best explained in the README of it's Github repository. Here is&nbsp;<span style="color: #00ccff;"><a style="color: #00ccff;" href="https://yapf.now.sh/">demo</a></span>&nbsp;if you want to see it in action</p>
+<blockquote class="blockquote">Most of the current formatters for Python --- e.g., autopep8, and pep8ify --- are made to remove lint errors from code. This has some obvious limitations. For instance, code that conforms to the PEP 8 guidelines may not be reformatted. But it doesn't mean that the code looks good. YAPF takes a different approach. It's based off of 'clang-format', developed by Daniel Jasper. In essence, the algorithm takes the code and reformats it to the best formatting that conforms to the style guide, even if the original code didn't violate the style guide. The idea is also similar to the 'gofmt' tool for the Go programming language: end all holy wars about formatting - if the whole codebase of a project is simply piped through YAPF whenever modifications are made, the style remains consistent throughout the project and there's no point arguing about style in every code review. The ultimate goal is that the code YAPF produces is as good as the code that a programmer would write if they were following the style guide. It takes away some of the drudgery of maintaining your code</blockquote>
+<p>Sounds interesting? Let's get started with the installation</p>
+<p>Fire-up your terminal and install</p>
+<pre class="language-python"><code>pip3 install yapf</code></pre>
+<p>Then open Sublime Text and as always open package control &gt; Install package and search for package named <code>PyYapf Python Formatter</code> and install it.</p>
+<p>Restart Sublime and select any poorly formatted&nbsp;python code and press 'ctrl'+'alt'+'f' and the code you selected should be reformatted according to the Python style guidelines. If you don't select any line in and hit 'ctrl'+'alt'+'f' then your whole file will be reformatted (Cool Right ?)</p>
+<p><strong style="font-size: 24px;">4. Anaconda</strong></p>
+<p>Anaconda is ultimate python package because it adds a number of IDE like features to your Sublime Text Editor. To name a few, It includes&nbsp;</p>
+<ul>
+<li>Show Documentation</li>
+<li>Autocompletion</li>
+<li>McCabe code complexity checker</li>
+<li>Code Linting</li>
+<li>Goto Definition</li>
+</ul>
+<p>Search for a package named <code>Anaconda</code> and install it. I use a different linter package (SublimeLinter-flake8, which we installed in Step 1 of this post)&nbsp;so I disable linting altogether within the user-defined Anaconda settings file, Anaconda.sublime-settings, via the file menu: Sublime &gt; Preferences &gt; Package Settings &gt; Anaconda &gt; Settings - User: <code>{"anaconda_linting": false}</code></p>
+<p>If you have installed both PyYapf and Anaconda then the 'ctrl'+'alt'+'f'&nbsp; may not work because Anaconda uses this keybinding for the "finding all the usages of the selected word". So, You have to change this shortcut to work with PyYapf. One way to do this is Go to Preferences &gt; Package Settings &gt; Anaconda &gt; Key Bindings - Default and find command&nbsp;<code>anaconda_find_usages</code>&nbsp;then change its key value from&nbsp;<code>["ctrl+alt+f"]</code>&nbsp;to&nbsp;<code>["ctrl+alt+a"]</code></p>
+<p><strong># NOTE:&nbsp;</strong>&nbsp;If you are on Linux and facing some difficulty while installing or some of the packages are not working as expected then try installing the module with sudo's H flag for e.g sudo -H install &lt;module_name&gt; or you can comment down below and I would love to help.</p>
+<p><span style="font-family: 'arial black', sans-serif;">That's it from my side, Is there any package you want it to be added to this post?&nbsp;What are your favourite packages for Sublime?</span></p> </span>
+            
+
+<div class="button-group">
+                <a target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=fosstack.com/setup-sublime-python/" class="social facebook"><img width="40px"  src="../static/images/social/facebook-min.png"></a>
+
+                <a target="_blank"  href="https://twitter.com/intent/tweet?url=fosstack.com/setup-sublime-python/&via=mohi7solanki&text=Must-Have Packages and Settings in Sublime Text for a Python Developer&original_referer=https://fosstack.com/setup-sublime-python/&hashtags=&lt;QuerySet [&lt;Tag: python&gt;, &lt;Tag: sublime&gt;, &lt;Tag: text-edtior&gt;]&gt;" class="social twitter"><img width="40px" src="../static/images/social/twitter-min.png"></a>
+
+                <a target="_blank"  href="https://www.linkedin.com/shareArticle?mini=true&url=fosstack.com/setup-sublime-python/&title=Must-Have Packages and Settings in Sublime Text for a Python Developer&summary=In this post, I will show you awesome Sublime packages/plugins and some settings for your workflow which will make your life as a Python programmer much more easier.&source=" class="social linkedin"><img width="40px" src="../static/images/social/linkedin-min.png"></a>
+
+                <a target="_blank"  onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location) + '&title=Must-Have Packages and Settings in Sublime Text for a Python Developer'; return false" href="https://www.reddit.com/submit" class="social reddit"><img width="40px" src="../static/images/social/reddit-icon.svg"></a>
+
+</div>
+<br>
+
+            
+                  <div id="disqus_thread"></div>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+	var disqus_shortname = 'Fosstack';
+
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+/* ]]> */
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            
+
+
+            
+            <br><br>
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <br><h4 class="text-center">Related Posts</h4><br>
+                
+                    <div class="post-preview">
+                      <a href="../algorithms-with-python/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Learn Algorithms with Python
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/upgrade-all-pip-packages/index.html">
+                        <h5 class="text-center post-subtitle">
+                          How to upgrade all outdated pip packages
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../how-to-add-google-authentication-in-django/index.html">
+                        <h5 class="text-center post-subtitle">
+                          How to add Google and Github OAuth in Django
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/videos-playlist-length-calculator/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Playlist Length Calculator
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/ptpython-python-repl/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Ptpython - A Python REPL You will Love!
+                        </h5>
+                      </a>
+                    </div>
+                  
+                
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto mb-3">
+        <form id="subscription_ajax" class="mb-4" method="post" novalidate>
+
+          <input type='hidden' name='csrfmiddlewaretoken' value='L7sDPgCRoggjfozoaDg6vqExvteAIl0HDNAul1LsbMj0fsFNHN2ITEtdILZG4J47' />
+          <div class="input-group">
+              <input type="email" id="sub_email" name="email" placeholder="Enter your email here" class="form-control border border-secondary" required="required">
+              <span class="input-group-btn">
+                  <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-send"></i></button>
+              </span>
+          </div>
+      </form>
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="https://twitter.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://facebook.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Fosstack 2018</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/core_blog/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/core_blog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/core_blog/js/clean-blog.min.js"></script>
+    <script src="../static/app.min.js"></script>
+    <script src="../static/core_blog/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+    
+    <!-- Custom scripts for this template -->
+    
+
+
+  </body>
+
+</html>
+
+

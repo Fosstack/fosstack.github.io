@@ -1,0 +1,567 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107455490-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-107455490-1');
+    </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2434930922382269",
+    enable_page_level_ads: true
+  });
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c5c5c5">
+    <meta name="msapplication-navbutton-color" content="#FAFAFA">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FAFAFA">
+
+    
+    <meta name="title" content="How to Set up TinyMCE in Django" >
+    <meta name="description" content="TinyMCE is a WYSIWYG HTML editor. It is used for creating website content.In this tutorial, I will show you how to set up fully working TinyMCE in Django admin and in custom form and how to implement syntax highlighting in frontend with help of it." >
+    <meta name="keywords" content="python" >
+    <meta name="author" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 days">
+    <!-- python,linux,FOSS -->
+    <!-- For Facebook -->
+    <meta property="og:title" content="Fosstack Blog" />
+    <meta property="og:type" content="article" />
+<!--       <meta property="og:image" content="" /> -->
+    <meta property="og:url" content="/how-to-set-up-tinymce-in-django-app/" />
+    <meta property="og:description" content="TinyMCE is a WYSIWYG HTML editor. It is used for creating website content.In this tutorial, I will show you how to set up fully working TinyMCE in Django admin and in custom form and how to implement syntax highlighting in frontend with help of it." />
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="How to Set up TinyMCE in Django" />
+    <meta name="twitter:description" content="TinyMCE is a WYSIWYG HTML editor. It is used for creating website content.In this tutorial, I will show you how to set up fully working TinyMCE in Django admin and in custom form and how to implement syntax highlighting in frontend with help of it." />
+<!--       <meta name="twitter:image" content="" />-->
+ 
+
+    <title>
+    
+  How to Set up TinyMCE in Django | 
+      Fosstack
+    
+
+    </title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico" />
+    <!-- Bootstrap core CSS -->
+    <link href="../static/core_blog/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/core_blog/css/clean-blog.min.css" rel="stylesheet">
+    <link href="../static/app.min.css" rel="stylesheet">
+    <link href="../static/core_blog/css/github.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/core_blog/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+  <style>
+    #bg{
+      background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,#30B58B,#22D0BA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    #ov{
+      background-color: transparent !important;
+    }
+  </style>
+
+
+
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">Fosstack</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../category/python/index.html">Python</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../category/linux/index.html">Linux</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../tips/index.html">Tips</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about/index.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact/index.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#"  data-toggle="modal" data-target="#mkdocs_search_modal">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form role="form" method="get" action="../index.html" accept-charset="utf-8">
+                    <div class="form-group">
+                        <input autofocus type="text" name="q" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+  <!-- Page Header -->
+    <header class="masthead" id="bg">
+      <div class="overlay" id="ov"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>How to Set up TinyMCE in Django</h1>
+              <h6 class="post-subtitle">
+              <h2 class="subheading">TinyMCE is a WYSIWYG HTML editor. It is used for creating website content.In this tutorial, I will show you how to set up fully working TinyMCE in Django admin and in custom form and how to implement syntax highlighting in frontend with help of it.</h2>
+                
+              <span class="meta">Posted by
+                <a href="index.html#">Karan</a>
+                on September 29, 2017&nbsp;&nbsp;
+                <span id="hits" style="display:inline-block"> <i class="fa fa-eye" aria-hidden="true"></i> 5221 views</span>
+                
+              </h6>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    
+
+
+    
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="post_detail col-lg-8 col-md-10 mx-auto">
+            <span id="the_content"><h3>&nbsp;</h3>
+<h3>Introduction</h3>
+<p>TinyMCE is a WYSIWYG HTML editor, the word WYSIWYG is an acronym for "what you see is what you get". It is designed to simplify website content creation. One can easily copy HTML content and paste into TinyMCE editor, the content you paste will look exactly same, hence WYSIWYG. In this tutorial, we'll implement TinyMCE in Django admin and custom form.</p>
+<p>&nbsp;</p>
+<h3>Installation</h3>
+<p>There are many TinyMCE packages available for Django but we will use&nbsp;<span style="color: #33cccc;"><a style="color: #33cccc;" href="https://github.com/romanvm/django-tinymce4-lite">django-tinymce4-lite</a></span></p>
+<p>Install it with pip:</p>
+<pre class="language-python" style="word-spacing: 0px;"><code>pip3 install django-tinymce4-lite</code></pre>
+<p>Add "tinymce" to&nbsp;<code>INSTALLED_APPS</code>&nbsp;in <code>settings.py</code> of your project</p>
+<pre class="language-python" style="word-spacing: 0px;"><code>INSTALLED_APPS = [
+      ...
+    'tinymce',
+      ...
+    ]
+
+</code></pre>
+<p>Add tinymce.urls to <code>urls.py</code> of your project</p>
+<pre class="language-python" style="word-spacing: 0px;"><code>urlpatterns = [
+    ...
+    url(r'^tinymce/', include('tinymce.urls')),
+    ...
+]</code></pre>
+<p>Also in&nbsp;<code>settings.py</code>&nbsp;file add following code to configure TinyMCE's toolbars</p>
+<pre class="language-python" style="word-spacing: 0px;"><code>TINYMCE_DEFAULT_CONFIG = {
+    'height': 360,
+    'width': 1120,
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 20,
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': '''
+            textcolor save link image media preview codesample contextmenu
+            table code lists fullscreen  insertdatetime  nonbreaking
+            contextmenu directionality searchreplace wordcount visualblocks
+            visualchars code fullscreen autolink lists  charmap print  hr
+            anchor pagebreak
+            ''',
+    'toolbar1': '''
+            fullscreen preview bold italic underline | fontselect,
+            fontsizeselect  | forecolor backcolor | alignleft alignright |
+            aligncenter alignjustify | indent outdent | bullist numlist table |
+            | link image media | codesample |
+            ''',
+    'toolbar2': '''
+            visualblocks visualchars |
+            charmap hr pagebreak nonbreaking anchor |  code |
+            ''',
+    'contextmenu': 'formats | link image',
+    'menubar': True,
+    'statusbar': True,
+    }</code></pre>
+<p>&nbsp;</p>
+<h3>models.py</h3>
+<p>For brevity, we'll use minimal code required for this tutorial</p>
+<pre class="language-python" style="word-spacing: 0px;"><code>from django.db import models
+from tinymce import HTMLField
+
+class Post(models.Model):
+    title = models.CharField(max_length=120)
+    description = models.TextField(max_length=250,null=True)
+    content = HTMLField('Content')
+    draft = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title
+
+</code></pre>
+<p>Now we have to register <strong>Post</strong> model to admin panel, so to do that the <code>admin.py</code>&nbsp;should be like:</p>
+<pre class="language-python"><code>from django.contrib import admin
+
+from . import models
+
+admin.site.register(models.Post)</code></pre>
+<p>Apply database migration commands if you haven't, then open up admin panel and try adding a Post, TinyMCE should appear in the content field.</p>
+<p>&nbsp;</p>
+<h3>TinyMCE in modelform</h3>
+<p>If you want TinyMCE in your modelform then create a file&nbsp;<code>forms.py</code>&nbsp;in the same app and add following code</p>
+<pre class="language-python" style="word-spacing: 0px;"><code>from django import forms
+from tinymce import TinyMCE
+from .models import Post
+
+
+class TinyMCEWidget(TinyMCE):
+    def use_required_attribute(self, *args):
+        return False
+
+
+class PostForm(forms.ModelForm):
+    content = forms.CharField(
+        widget=TinyMCEWidget(
+            attrs={'required': False, 'cols': 30, 'rows': 10}
+        )
+    )
+
+    class Meta:
+        model = Post
+        fields = '__all__'
+
+</code></pre>
+<p>And the template corresponding to modelform would be:</p>
+<pre class="language-python"><code>{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+    {{ form.media }}
+    &lt;div class="row form-error"&gt;
+        &lt;div class="column" id="content"&gt;
+            &lt;form  method="post" action='' enctype="multipart/form-data"&gt;
+                {% csrf_token %}
+                {{ form.as_p  }}
+                &lt;input class="button" type="submit" value="Save"&gt;
+            &lt;/form&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+{% endblock %}
+
+</code></pre>
+<h3>&nbsp;</h3>
+<h3>JavaScript syntax highlighter</h3>
+<p>The {} button in TinyMCE editor can be used to add code snippet in the article or content, it provides drop-down to choose language so that it can generate HTML/CSS code as:</p>
+<pre class="language-css" style="word-spacing: 0px;"><code>&lt;pre class="language-python" style="word-spacing: 0px;"&gt;
+    &lt;code&gt;pip3 install django-tinymce4-lite&lt;/code&gt;
+&lt;/pre&gt;
+</code></pre>
+<p>To highlight the syntax you need something on the front end which can understand how to highlight code cooked by TinyMCE. So TinyMCE compatible javascript highlighter as prismjs or hightlightjs can be used in the frontend for highlighting code snippets. Being the developer of this blog I have used highlightjs with Github theme for syntax highlighting. You can download either prismjs or highlightjs. After downloading any of them extract the zip and move CSS and JS files to the static directory of your project. After this add these files in the template where you need syntax highlighting, or you may add these file in base template also.</p>
+<pre class="language-css" style="word-spacing: 0px;"><code>&lt;link href="{% static "styles/github.css" %}" rel="stylesheet"&gt;
+
+&lt;script src="{% static "highlight.pack.js" %}"&gt;&lt;/script&gt;
+&lt;script&gt;hljs.initHighlightingOnLoad();&lt;/script&gt;
+
+</code></pre>
+<h3>&nbsp;</h3>
+<h3>Post detail template</h3>
+<p>Now that we've configured TinyMCE, we need to render the content in post detail page, it can be done by applying safe filter to the content field of article in post detail template as illustrate below</p>
+<pre class="language-css"><code>{% extends "base.html" %}
+{% load static %}
+
+     {# assuming that your base.html contains block content   #}
+     {#   and instance variable being supplied from view      #}
+
+
+{% block content %}
+    
+            &lt;h3 &gt; {{instance.title}} &lt;/h3&gt;
+            &lt;div&gt; {{ instance.content | safe }}  &lt;/div&gt;
+    
+{% endblock %}
+
+</code></pre>
+<h3>&nbsp;</h3>
+<h3><a id="setting_up_filebrowser_for_media"></a>Setting up filebrowser for media</h3>
+<p>In production, you need to define STATIC_ROOT and&nbsp; MEDIA_ROOT in settings.py for getting static files like CSS, JS etc. from third-party packages available to be served, so your project's settings.py should be configured like:</p>
+<pre class="language-python"><code>STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS= [
+    os.path.join(BASE_DIR , "static")
+]
+
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR),"static_cdn")
+MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),"media_cdn")
+
+</code></pre>
+<p>In <span style="color: #808080;"><strong>static_cdn</strong></span>, all the static files from static directories of your project as well as third-party packages will be collected there, and in media_cdn you can use it you collect media objects like images, videos your project. For TinyMCE to store media files we need to create a directory named "<span style="color: #808080;"><strong>uploads</strong></span>" in <span style="color: #808080;"><strong>media_cdn</strong></span>. To upload an image with TinyMCE you can put a link to an image in upload image option, but to upload images or videos we need to install django filebrowser.</p>
+<pre class="language-python"><code>pip3 install django-filebrowser-no-grappelli</code></pre>
+<p>"django-filebrowser" package needs grappelli to work properly, grappelli is customized Django admin panel which doesn't look appealing at all, so we choose django-filebrowser-no-grappelli package which is compatible with Django's native admin panel as well as other bootstrapped admin panel as jet. For handling images TinyMCE requires pillow package, you can install it with pip</p>
+<pre class="language-python"><code>pip3 install pillow</code></pre>
+<p>Add filebrowser to INSTALLED_APPS in settings.py</p>
+<pre class="language-python"><code>INSTALLED_APPS = [
+         ...
+    'filebrowser',
+         ...
+]
+
+</code></pre>
+<p>Add the following code in&nbsp;<code>urls.py</code></p>
+<pre class="language-python"><code>from filebrowser.sites import site
+
+
+urlpatterns = [
+
+               ...
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/filebrowser/', include(site.urls)),
+               ...
+]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL , document_root = settings.STATIC_ROOT )
+    urlpatterns += static(settings.MEDIA_URL , document_root = settings.MEDIA_ROOT )
+
+</code></pre>
+<p>Finally, collect static files to static_cdn with the following command</p>
+<pre class="language-python"><code>python3 manage.py collectstatic</code></pre>
+<p><span style="font-size: 14pt; color: #808080;"><strong>#</strong></span>&nbsp;By following the tutorial, your TinyMCE should be ready to help you make awesome content. You can clone and run sample Django project if you have any problem in understanding the tutorial, here is Github&nbsp;<a title="tinymce in django | fosstack.com" href="https://github.com/fosstack/django_tinymce_demo" target="_blank" rel="noopener noreferrer"><span style="font-size: 14pt;"><span style="color: #00ccff;">link</span></span></a></p>
+<p><span style="color: #999999;"><strong>Happy Coding :)</strong></span></p> </span>
+            
+
+<div class="button-group">
+                <a target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=fosstack.com/how-to-set-up-tinymce-in-django-app/" class="social facebook"><img width="40px"  src="../static/images/social/facebook-min.png"></a>
+
+                <a target="_blank"  href="https://twitter.com/intent/tweet?url=fosstack.com/how-to-set-up-tinymce-in-django-app/&via=karansthr&text=How to Set up TinyMCE in Django&original_referer=https://fosstack.com/how-to-set-up-tinymce-in-django-app/&hashtags=&lt;QuerySet [&lt;Tag: tinymce&gt;, &lt;Tag: python&gt;, &lt;Tag: django&gt;, &lt;Tag: django-tinymce4-lite&gt;]&gt;" class="social twitter"><img width="40px" src="../static/images/social/twitter-min.png"></a>
+
+                <a target="_blank"  href="https://www.linkedin.com/shareArticle?mini=true&url=fosstack.com/how-to-set-up-tinymce-in-django-app/&title=How to Set up TinyMCE in Django&summary=TinyMCE is a WYSIWYG HTML editor. It is used for creating website content.In this tutorial, I will show you how to set up fully working TinyMCE in Django admin and in custom form and how to implement syntax highlighting in frontend with help of it.&source=" class="social linkedin"><img width="40px" src="../static/images/social/linkedin-min.png"></a>
+
+                <a target="_blank"  onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location) + '&title=How to Set up TinyMCE in Django'; return false" href="https://www.reddit.com/submit" class="social reddit"><img width="40px" src="../static/images/social/reddit-icon.svg"></a>
+
+</div>
+<br>
+
+            
+                  <div id="disqus_thread"></div>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+	var disqus_shortname = 'Fosstack';
+
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+/* ]]> */
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            
+
+
+            
+            <br><br>
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <br><h4 class="text-center">Related Posts</h4><br>
+                
+                    <div class="post-preview">
+                      <a href="../algorithms-with-python/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Learn Algorithms with Python
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../how-to-add-google-authentication-in-django/index.html">
+                        <h5 class="text-center post-subtitle">
+                          How to add Google and Github OAuth in Django
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/videos-playlist-length-calculator/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Playlist Length Calculator
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/quick-sudo/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Run Last Command as Sudo Quickly
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../must-have-linux-apps/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Must-Have Applications for Linux
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/resume-supported-download-with-wget/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Resume Supported Download with WGET
+                        </h5>
+                      </a>
+                    </div>
+                  
+                
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto mb-3">
+        <form id="subscription_ajax" class="mb-4" method="post" novalidate>
+
+          <input type='hidden' name='csrfmiddlewaretoken' value='dcbeBdiIpGIIW1Y49uH8GqpBvKgWGW4v5Sj57YrjccLpW54tGEtK4EehI2122k8V' />
+          <div class="input-group">
+              <input type="email" id="sub_email" name="email" placeholder="Enter your email here" class="form-control border border-secondary" required="required">
+              <span class="input-group-btn">
+                  <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-send"></i></button>
+              </span>
+          </div>
+      </form>
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="https://twitter.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://facebook.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Fosstack 2018</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/core_blog/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/core_blog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/core_blog/js/clean-blog.min.js"></script>
+    <script src="../static/app.min.js"></script>
+    <script src="../static/core_blog/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+    
+    <!-- Custom scripts for this template -->
+    
+
+
+  </body>
+
+</html>
+
+

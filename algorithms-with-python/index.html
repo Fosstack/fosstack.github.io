@@ -1,0 +1,504 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107455490-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-107455490-1');
+    </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2434930922382269",
+    enable_page_level_ads: true
+  });
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c5c5c5">
+    <meta name="msapplication-navbutton-color" content="#FAFAFA">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FAFAFA">
+
+    
+    <meta name="title" content="Learn Algorithms with Python" >
+    <meta name="description" content="In this post, I will show you some Python modules and resources which can help you learn &quot;Data Structures and Algorithms&quot; with Python as a beginner." >
+    <meta name="keywords" content="python" >
+    <meta name="author" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 days">
+    <!-- python,linux,FOSS -->
+    <!-- For Facebook -->
+    <meta property="og:title" content="Fosstack Blog" />
+    <meta property="og:type" content="article" />
+<!--       <meta property="og:image" content="" /> -->
+    <meta property="og:url" content="/algorithms-with-python/" />
+    <meta property="og:description" content="In this post, I will show you some Python modules and resources which can help you learn &quot;Data Structures and Algorithms&quot; with Python as a beginner." />
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Learn Algorithms with Python" />
+    <meta name="twitter:description" content="In this post, I will show you some Python modules and resources which can help you learn &quot;Data Structures and Algorithms&quot; with Python as a beginner." />
+<!--       <meta name="twitter:image" content="" />-->
+ 
+
+    <title>
+    
+  Learn Algorithms with Python | 
+      Fosstack
+    
+
+    </title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../static/images/favicon.ico" />
+    <!-- Bootstrap core CSS -->
+    <link href="../static/core_blog/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../static/core_blog/css/clean-blog.min.css" rel="stylesheet">
+    <link href="../static/app.min.css" rel="stylesheet">
+    <link href="../static/core_blog/css/github.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../static/core_blog/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+  <style>
+    #bg{
+      background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,#30B58B,#22D0BA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    #ov{
+      background-color: transparent !important;
+    }
+  </style>
+
+
+
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html">Fosstack</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../category/python/index.html">Python</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../category/linux/index.html">Linux</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../tips/index.html">Tips</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about/index.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contact/index.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#"  data-toggle="modal" data-target="#mkdocs_search_modal">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form role="form" method="get" action="../index.html" accept-charset="utf-8">
+                    <div class="form-group">
+                        <input autofocus type="text" name="q" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+  <!-- Page Header -->
+    <header class="masthead" id="bg">
+      <div class="overlay" id="ov"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Learn Algorithms with Python</h1>
+              <h6 class="post-subtitle">
+              <h2 class="subheading">In this post, I will show you some Python modules and resources which can help you learn &quot;Data Structures and Algorithms&quot; with Python as a beginner.</h2>
+                
+              <span class="meta">Posted by
+                <a href="index.html#">Karan</a>
+                on February 07, 2018&nbsp;&nbsp;
+                <span id="hits" style="display:inline-block"> <i class="fa fa-eye" aria-hidden="true"></i> 23416 views</span>
+                
+              </h6>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    
+
+
+    
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="post_detail col-lg-8 col-md-10 mx-auto">
+            <span id="the_content"><p>In this post, we will explore how to get started with data structures and algorithms. So if you are a novice programmer or one who has no computer science background then you are reading something worth your time. So let's begin with few questions</p>
+<p><span style="color: #333333; font-size: 15pt;"><strong>What is an Algorithm?</strong></span></p>
+<p>An algorithm is a set of steps or a procedure to solve a problem, especially by computers. For example, the algorithm to buy something from a&nbsp;grocery store will have following steps:</p>
+<ol>
+<li>Go to the grocery store</li>
+<li>Find the product</li>
+<li>Add to cart</li>
+<li>Make payment</li>
+</ol>
+<p>Similarly, for accomplishing tasks in computers a procedure is followed to get it done. Let's talk about some famous algorithms</p>
+<ul>
+<li>Optimization Algorithms - Google Maps Direction show optimal distance using graph algorithms (like Dijkstra's Algorithm)</li>
+<li>Data Compression - compressed zip files&nbsp;</li>
+<li>Face Detection - computer vision algorithms (like Viola-Jones algorithm )</li>
+<li>RSA Algorithm - secure communication with cryptography</li>
+<li>Random number generator&nbsp;</li>
+<li>Pattern Searching</li>
+<li>Merge sort, Quicksort, Heapsort etc.</li>
+<li>Scheduling algorithms to manage tasks in computers</li>
+</ul>
+<p>Design and analysis of an algorithm is a fundamental topic in computer science and it is important to check the efficiency and correctness of algorithms. To compare algorithms you may check how much time it takes to give output on a&nbsp;particular machine, with particular hardware specification, with a particular language, but this is not a generic way to measure efficiency, therefore the Asymptotic Notations are used to compare algorithms independent of the hardware and the language.</p>
+<p>&nbsp;</p>
+<p><strong style="color: #333333; font-size: 15pt;">Why&nbsp;</strong><strong style="color: #333333; font-size: 15pt;">Python&nbsp;for&nbsp;</strong><strong style="color: #333333; font-size: 15pt;">Algorithms?</strong></p>
+<p>Traditional programming languages like C, C++ etc. force students to deal with details of data structures and supporting routines, rather than algorithm design. Python represents and <em>algorithm-oriented</em> language that has been sorely needed in education. The way Python handles data types represents a perfect match with the way textbook present algorithms<span style="font-family: 'Times New Roman'; font-size: medium;">.</span></p>
+<p>If it sounds "Not Easy" then don't worry, we will learn it in fun way. There is a bunch of topics like searching,&nbsp;sorting, operations on graphs, linked lists, trees etc., Consider these topics as grapes, then "how do you eat all the grapes from a bunch of grapes?", and the answer is "<span style="color: #808080;"><strong>one by one</strong></span>", I will provide you a couple of resources where you can start practicing algorithms step by step.</p>
+<p>While learning algorithms you might read "<span style="color: #808080;"><strong>Pseudocode</strong></span>" frequently in books or tutorials, the pseudocode is way of writing algorithms which is not specific to a programming language, for example, you can write pseudocode to check if a number is even or odd as</p>
+<pre><code>a &lt;- input a number
+if a is divisible by 2
+    print a is an even number
+else
+    print a is an odd number
+</code></pre>
+<p>One can implement the following algorithm in any language by following above pseudocode. If you want to master algorithms then read "Introduction to Algorithms"&nbsp;<span style="color: #808080;">(by Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein)</span>, in this book algorithms are represented by pseudocodes which can be implemented by any programming language.</p>
+<p><span style="color: #333333;"><span style="font-size: 20px;"><strong>Strategy to learn an Algorithm</strong></span></span></p>
+<p>You can follow these steps&nbsp;</p>
+<ol>
+<li>Write pseudocode&nbsp;</li>
+<li>Implement it with any programming language following pseudocode</li>
+<li>Test correctness by checking output with different inputs</li>
+<li>Analyse complexity</li>
+</ol>
+<p>If you are just starting out then this book is a great place to start</p>
+<p><a href="http://interactivepython.org/runestone/static/pythonds/index.html">http://interactivepython.org/runestone/static/pythonds/index.html</a></p>
+<p><span style="color: #808080;"><strong>H</strong></span><span style="color: #808080;"><strong>elpful Python Modules</strong></span></p>
+<h4>Pygorithms</h4>
+<p>Pygorithm is a python module which can help you learn algorithms in fun way. You can get the code, time complexities and much more by just importing the required algorithm. It covers implementation of all major algorithms in Python.</p>
+<p>To install it with pip:</p>
+<pre class="language-python"><code>pip3 install pygorithm</code></pre>
+<p>Now open python shell in&nbsp;the terminal and try the following code</p>
+<pre class="language-python"><code>&gt;&gt;&gt; from pygorithm import sorting
+&gt;&gt;&gt; arr = [107, 97, 114, 97, 110] # list be sorted
+&gt;&gt;&gt; sorting.bubble_sort.sort(arr)
+[97, 97, 107, 110, 114]           # sorted list
+
+&gt;&gt;&gt; help(sorting)
+Help on package pygorithm.sorting in pygorithm:
+
+NAME
+    pygorithm.sorting - Collection of sorting methods
+
+PACKAGE CONTENTS
+    bubble_sort
+    bucket_sort
+    counting_sort
+    heap_sort
+    insertion_sort
+    merge_sort
+    quick_sort
+    selection_sort
+    shell_sort
+
+DATA
+    __all__ = ['bubble_sort', 'bucket_sort', 'counting_sort', 'heap_sort',...
+
+FILE
+    /usr/lib/python3.6/site-packages/pygorithm/sorting/__init__.py
+
+(END)
+
+
+&gt;&gt;&gt; code = sorting.bubble_sort.get_code()
+&gt;&gt;&gt; print(code)
+def sort(_list):
+    """
+    Bubble Sorting algorithm
+
+    :param _list: list of values to sort
+    :return: sorted values
+    """
+    for i in range(len(_list)):
+        for j in range(len(_list) - 1, i, -1):
+            if _list[j] &lt; _list[j - 1]:
+                _list[j], _list[j - 1] = _list[j - 1], _list[j]
+    return _list
+
+
+&gt;&gt;&gt; print ( sorting.bubble_sort.time_complexities() )
+Best Case: O(n), Average Case: O(n ^ 2), Worst Case: O(n ^ 2).
+
+For Improved Bubble Sort:
+Best Case: O(n); Average Case: O(n * (n - 1) / 4); Worst Case: O(n ^ 2)
+
+</code></pre>
+<p>Github link:&nbsp;<a href="https://github.com/OmkarPathak/pygorithm">https://github.com/OmkarPathak/pygorithm</a></p>
+<h5>Other resources</h5>
+<ul>
+<li><a href="https://github.com/TheAlgorithms/Python">https://github.com/TheAlgorithms/Python</a></li>
+<li><a href="https://github.com/keon/algorithms">https://github.com/keon/algorithms</a></li>
+<li><a href="https://www.hackerrank.com/domains/algorithms">https://www.hackerrank.com/domains/algorithms</a></li>
+<li><a href="http://codingbat.com/python">http://codingbat.com/python</a>&nbsp; &nbsp;(if you are an absolute beginner)</li>
+<li><a href="https://en.wikipedia.org/wiki/List_of_algorithms">https://en.wikipedia.org/wiki/List_of_algorithms</a></li>
+<li><a href="https://github.com/jdsutton/Technical-Interview-Megarepo">https://github.com/jdsutton/Technical-Interview-Megarepo</a></li>
+</ul>
+<p>&nbsp;</p> </span>
+            
+
+<div class="button-group">
+                <a target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=fosstack.com/algorithms-with-python/" class="social facebook"><img width="40px"  src="../static/images/social/facebook-min.png"></a>
+
+                <a target="_blank"  href="https://twitter.com/intent/tweet?url=fosstack.com/algorithms-with-python/&via=karansthr&text=Learn Algorithms with Python&original_referer=https://fosstack.com/algorithms-with-python/&hashtags=&lt;QuerySet [&lt;Tag: python&gt;, &lt;Tag: algorithms&gt;]&gt;" class="social twitter"><img width="40px" src="../static/images/social/twitter-min.png"></a>
+
+                <a target="_blank"  href="https://www.linkedin.com/shareArticle?mini=true&url=fosstack.com/algorithms-with-python/&title=Learn Algorithms with Python&summary=In this post, I will show you some Python modules and resources which can help you learn &quot;Data Structures and Algorithms&quot; with Python as a beginner.&source=" class="social linkedin"><img width="40px" src="../static/images/social/linkedin-min.png"></a>
+
+                <a target="_blank"  onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location) + '&title=Learn Algorithms with Python'; return false" href="https://www.reddit.com/submit" class="social reddit"><img width="40px" src="../static/images/social/reddit-icon.svg"></a>
+
+</div>
+<br>
+
+            
+                  <div id="disqus_thread"></div>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+	var disqus_shortname = 'Fosstack';
+
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+/* ]]> */
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            
+
+
+            
+            <br><br>
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <br><h4 class="text-center">Related Posts</h4><br>
+                
+                    <div class="post-preview">
+                      <a href="../setup-sublime-python/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Must-Have Packages and Settings in Sublime Text for a Python Developer
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/upgrade-all-pip-packages/index.html">
+                        <h5 class="text-center post-subtitle">
+                          How to upgrade all outdated pip packages
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/videos-playlist-length-calculator/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Playlist Length Calculator
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../how-to-set-up-tinymce-in-django-app/index.html">
+                        <h5 class="text-center post-subtitle">
+                          How to Set up TinyMCE in Django
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/quick-sudo/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Run Last Command as Sudo Quickly
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../must-have-linux-apps/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Must-Have Applications for Linux
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/ptpython-python-repl/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Ptpython - A Python REPL You will Love!
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../tips/resume-supported-download-with-wget/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Resume Supported Download with WGET
+                        </h5>
+                      </a>
+                    </div>
+                  
+                
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto mb-3">
+        <form id="subscription_ajax" class="mb-4" method="post" novalidate>
+
+          <input type='hidden' name='csrfmiddlewaretoken' value='BOXxM4fUGdI3TgobqKj5fxtohAEQ6QWetu5oiPovtJLKTkuAXU5HDLi4uSpWse0E' />
+          <div class="input-group">
+              <input type="email" id="sub_email" name="email" placeholder="Enter your email here" class="form-control border border-secondary" required="required">
+              <span class="input-group-btn">
+                  <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-send"></i></button>
+              </span>
+          </div>
+      </form>
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="https://twitter.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://facebook.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Fosstack 2018</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/core_blog/vendor/jquery/jquery.min.js"></script>
+    <script src="../static/core_blog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/core_blog/js/clean-blog.min.js"></script>
+    <script src="../static/app.min.js"></script>
+    <script src="../static/core_blog/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+    
+    <!-- Custom scripts for this template -->
+    
+
+
+  </body>
+
+</html>
+
+

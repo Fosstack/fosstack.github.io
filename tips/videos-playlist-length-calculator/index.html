@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107455490-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-107455490-1');
+    </script>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2434930922382269",
+    enable_page_level_ads: true
+  });
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#c5c5c5">
+    <meta name="msapplication-navbutton-color" content="#FAFAFA">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FAFAFA">
+
+    
+    <meta name="title" content="Playlist Length Calculator" >
+    <meta name="description" content="A Python package, CLI tool to calculate the length of all the video files and/or audio files in a directory and its sub-directories" >
+    <meta name="keywords" content="python" >
+    <meta name="author" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="3 days">
+    <!-- python,linux,FOSS -->
+    <!-- For Facebook -->
+    <meta property="og:title" content="Fosstack Blog" />
+    <meta property="og:type" content="article" />
+<!--       <meta property="og:image" content="" /> -->
+    <meta property="og:url" content="/tips/videos-playlist-length-calculator/" />
+    <meta property="og:description" content="A Python package, CLI tool to calculate the length of all the video files and/or audio files in a directory and its sub-directories" />
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Playlist Length Calculator" />
+    <meta name="twitter:description" content="A Python package, CLI tool to calculate the length of all the video files and/or audio files in a directory and its sub-directories" />
+<!--       <meta name="twitter:image" content="" />-->
+ 
+
+    <title>
+    
+  Playlist Length Calculator | 
+      Fosstack
+    
+
+    </title>
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../../static/images/favicon.ico" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/core_blog/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../static/core_blog/css/clean-blog.min.css" rel="stylesheet">
+    <link href="../../static/app.min.css" rel="stylesheet">
+    <link href="../../static/core_blog/css/github.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="../../static/core_blog/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    
+  <style>
+    #bg{
+      background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right,#30B58B,#22D0BA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    #ov{
+      background-color: transparent !important;
+    }
+  </style>
+
+
+
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="../../index.html">Fosstack</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      Menu
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../../category/python/index.html">Python</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../category/linux/index.html">Linux</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Tips</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../about/index.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../../contact/index.html">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html#"  data-toggle="modal" data-target="#mkdocs_search_modal">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <form role="form" method="get" action="../../index.html" accept-charset="utf-8">
+                    <div class="form-group">
+                        <input autofocus type="text" name="q" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+  <!-- Page Header -->
+    <header class="masthead" id="bg">
+      <div class="overlay" id="ov"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Playlist Length Calculator</h1>
+              <h6 class="post-subtitle">
+              <h2 class="subheading">A Python package, CLI tool to calculate the length of all the video files and/or audio files in a directory and its sub-directories</h2>
+                
+              <span class="meta">Posted by
+                <a href="index.html#">Karan</a>
+                on August 24, 2018&nbsp;&nbsp;
+                <span id="hits" style="display:inline-block"> <i class="fa fa-eye" aria-hidden="true"></i> 7655 views</span>
+                
+              </h6>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+    
+
+
+    
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="post_detail col-lg-8 col-md-10 mx-auto">
+            <span id="the_content"><p><img src="../../media/uploads/playlistlen.gif" alt="playlistlen | fosstack" width="796" height="542" /></p>
+<p>&nbsp;</p>
+<p>To install playlist-length:</p>
+<pre class="language-python"><code>pip install playlist-length --user
+</code></pre>
+<p>or</p>
+<pre class="language-python"><code>pip install --user -e git+https://github.com/karansthr/playlist-length#egg=playlist-length
+</code></pre>
+<h3>&nbsp;</h3>
+<h4>Dependencies:</h4>
+<p>ffmpeg&nbsp;is required for this package to work,</p>
+<p>To check if it is installed run following command in your terminal:</p>
+<pre class="language-python"><code>ffmpeg -version</code></pre>
+<p>If it is not installed, you can install it according to your platform.</p>
+<p>For Arch:</p>
+<pre class="language-python"><code> sudo pacman -S ffmpeg
+</code></pre>
+<p>For Ubuntu</p>
+<pre class="language-python"><code>sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install ffmpeg
+sudo apt-get install frei0r-plugins</code></pre>
+<p>For other OS read instructions&nbsp;<a title="ffmpeg installation" href="https://github.com/adaptlearning/adapt_authoring/wiki/Installing-FFmpeg">here</a></p>
+<h3>&nbsp;</h3>
+<h4>Usage:</h4>
+<p>To get the length of all the videos in a directory, give the path as an argument</p>
+<pre class="language-python"><code>$ playlistlen path_to_directory
+</code></pre>
+<p>or use the following command for current directory</p>
+<pre class="language-python"><code>$ playlistlen</code></pre>
+<p>By default, the media-type it will look for is <code>video</code> but you can specify <code>audio</code> or <code>both</code></p>
+<pre class="language-python"><code>$ playlistlen path_to_directory --media-type audio
+$ playlistlen path_to_directory --media-type both</code></pre>
+<p>By default, it will look directory and it's sub-directories recursively if you want it to look in the given directory only, then use&nbsp;<strong>--no-subdir&nbsp;</strong>flag, for example</p>
+<pre class="language-python" style="word-spacing: 0px;"><code>$ playlistlen path_to_directory --no-subdir
+</code></pre>
+<p>Repository link:</p>
+<p><span style="color: #33cccc;"><a style="color: #33cccc;" title="Playlis-Length | Github" href="https://github.com/karansthr/playlist-length" target="_blank" rel="noopener">https://github.com/karansthr/playlist-length</a></span></p>
+<p>&nbsp;</p> </span>
+            
+
+<div class="button-group">
+                <a target="_blank"  href="https://www.facebook.com/sharer/sharer.php?u=fosstack.com/tips/videos-playlist-length-calculator/" class="social facebook"><img width="40px"  src="../../static/images/social/facebook-min.png"></a>
+
+                <a target="_blank"  href="https://twitter.com/intent/tweet?url=fosstack.com/tips/videos-playlist-length-calculator/&via=karansthr&text=Playlist Length Calculator&original_referer=https://fosstack.com/tips/videos-playlist-length-calculator/&hashtags=&lt;QuerySet [&lt;Tag: python&gt;, &lt;Tag: playlistlen&gt;]&gt;" class="social twitter"><img width="40px" src="../../static/images/social/twitter-min.png"></a>
+
+                <a target="_blank"  href="https://www.linkedin.com/shareArticle?mini=true&url=fosstack.com/tips/videos-playlist-length-calculator/&title=Playlist Length Calculator&summary=A Python package, CLI tool to calculate the length of all the video files and/or audio files in a directory and its sub-directories&source=" class="social linkedin"><img width="40px" src="../../static/images/social/linkedin-min.png"></a>
+
+                <a target="_blank"  onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent(window.location) + '&title=Playlist Length Calculator'; return false" href="https://www.reddit.com/submit" class="social reddit"><img width="40px" src="../../static/images/social/reddit-icon.svg"></a>
+
+</div>
+<br>
+
+            
+                  <div id="disqus_thread"></div>
+<script type="text/javascript">
+/* <![CDATA[ */
+
+	var disqus_shortname = 'Fosstack';
+
+
+	/* * * DON'T EDIT BELOW THIS LINE * * */
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+/* ]]> */
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com/" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+            
+
+
+            
+            <br><br>
+            <div class="row">
+              <div class="col-lg-8 col-md-10 mx-auto">
+                <br><h4 class="text-center">Related Posts</h4><br>
+                
+                    <div class="post-preview">
+                      <a href="../../algorithms-with-python/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Learn Algorithms with Python
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../../setup-sublime-python/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Must-Have Packages and Settings in Sublime Text for a Python Developer
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../upgrade-all-pip-packages/index.html">
+                        <h5 class="text-center post-subtitle">
+                          How to upgrade all outdated pip packages
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../../how-to-set-up-tinymce-in-django-app/index.html">
+                        <h5 class="text-center post-subtitle">
+                          How to Set up TinyMCE in Django
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../quick-sudo/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Run Last Command as Sudo Quickly
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../../must-have-linux-apps/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Must-Have Applications for Linux
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../ptpython-python-repl/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Ptpython - A Python REPL You will Love!
+                        </h5>
+                      </a>
+                    </div>
+                  
+                      <hr>
+                  
+                
+                    <div class="post-preview">
+                      <a href="../resume-supported-download-with-wget/index.html">
+                        <h5 class="text-center post-subtitle">
+                          Resume Supported Download with WGET
+                        </h5>
+                      </a>
+                    </div>
+                  
+                
+              </div>
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+    </article>
+
+
+
+    <hr>
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto mb-3">
+        <form id="subscription_ajax" class="mb-4" method="post" novalidate>
+
+          <input type='hidden' name='csrfmiddlewaretoken' value='SSLfWDMXuXsO8daUxezDPibYdfFEB4jmKyT6soVyhtvv8hgj4olfdw0EqxqKXsnM' />
+          <div class="input-group">
+              <input type="email" id="sub_email" name="email" placeholder="Enter your email here" class="form-control border border-secondary" required="required">
+              <span class="input-group-btn">
+                  <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-send"></i></button>
+              </span>
+          </div>
+      </form>
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a href="https://twitter.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://facebook.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/Fosstack">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <p class="copyright text-muted">Copyright &copy; Fosstack 2018</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../../static/core_blog/vendor/jquery/jquery.min.js"></script>
+    <script src="../../static/core_blog/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../static/core_blog/js/clean-blog.min.js"></script>
+    <script src="../../static/app.min.js"></script>
+    <script src="../../static/core_blog/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+
+    
+    <!-- Custom scripts for this template -->
+    
+
+
+  </body>
+
+</html>
+
+
